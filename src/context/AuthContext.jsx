@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
   const router = useRouter();
 
   useEffect(() => {
-    // Verificar si el usuario está autenticado (por ejemplo, comprobamos el localStorage)
     const savedUser = JSON.parse(localStorage.getItem('user'));
     if (savedUser) {
       setUser(savedUser);

@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
   const removeItemFromCart = (productId) => {
     const updatedCart = cartItems.filter(item => item.id !== productId);
     setCartItems(updatedCart);
-    // Recalcular total
+  
     const newTotal = updatedCart.reduce((acc, item) => acc + item.price, 0);
     setTotalPrice(newTotal);
   };
