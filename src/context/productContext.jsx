@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react';
 
-export const ProductsContext = createContext();
+export const ProductContext = createContext();
 
-export const ProductsProvider = ({ children }) => {
+export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]); // Lista de productos
 
   const addProduct = (product) => {
@@ -26,10 +26,10 @@ export const ProductsProvider = ({ children }) => {
   };
 
   return (
-    <ProductsContext.Provider
+    <ProductContext.Provider
       value={{ products, addProduct, updateProduct, deleteProduct, getProductById }}
     >
       {children}
-    </ProductsContext.Provider>
+    </ProductContext.Provider>
   );
 };

@@ -6,6 +6,7 @@ const LogoutButton = () => {
 
   const handleLogout = () => {
     logout();
+    navigate('/index');
   };
 
   return (
